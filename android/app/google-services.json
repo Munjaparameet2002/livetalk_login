@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "437920616156",
+    "project_id": "live-talk-4b5d1",
+    "storage_bucket": "live-talk-4b5d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437920616156:android:dcd64426e464c248eb2e19",
+        "android_client_info": {
+          "package_name": "com.example.livetalk_login"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtAhZhFR5FcrfBm81hH8APrhM50byqwHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

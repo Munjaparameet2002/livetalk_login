@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:livetalk_login/verible.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -27,7 +28,9 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              child: Center(child: Image.asset("images/live.png"),),
+              child: Center(
+                child: Image.asset("images/live.png"),
+              ),
               width: 150,
               height: 150,
             ),
@@ -38,21 +41,18 @@ class _HomeState extends State<Home> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton.icon(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(fixedSize: Size(175, 35)),
-                icon: Image.asset("images/1.jpg",width: 20,height: 20,),label: Text("Sign in with Google"),
-                )
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton.icon(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.blue.shade900,
-                fixedSize: Size(175,35)),
-                icon: Icon(Icons.facebook),
-                label: Text("Sign in with Facebook"))
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(fixedSize: Size(200, 35)),
+              icon: Image.asset(
+                "images/1.jpg",
+                width: 20,
+                height: 20,
+              ),
+              label: Text(
+                "Sign in with Google",
+                style: TextStyle(color: go_col),
+              ),
+            )
           ],
         ),
         Row(
@@ -61,10 +61,26 @@ class _HomeState extends State<Home> {
             ElevatedButton.icon(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.amber, fixedSize: Size(175, 35)),
-                icon: Icon(Icons.account_circle_rounded),
-                label: Text(" Continue as a guest"),
-                )
+                    backgroundColor: Colors.blue.shade900,
+                    fixedSize: Size(200, 35)),
+                icon: Icon(Icons.facebook, color: g_col),
+                label: Text(
+                  "Sign in with Facebook",
+                  style: TextStyle(color: g_col),
+                ))
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton.icon(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.amber, fixedSize: Size(200, 35)),
+              icon: Icon(Icons.account_circle_rounded,color: g_col),
+              label:
+                  Text(" Continue as a guest", style: TextStyle(color: g_col)),
+            )
           ],
         )
       ]),
