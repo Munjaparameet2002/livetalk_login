@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:livetalk_login/firebase/login.dart';
+import 'package:livetalk_login/screen/first.dart';
+import 'package:livetalk_login/verible.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: Home(),
     debugShowCheckedModeBanner: false,
   ));
@@ -19,38 +21,52 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Livetalk")),
+      appBar: AppBar(
+          backgroundColor: b_col,
+          title: Text(
+            "Livetalk",
+            style: TextStyle(color: g_col),
+          )),
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        SizedBox(
+        const SizedBox(
           height: 150,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
+              width: 200,
+              height: 200,
               child: Center(
                 child: Image.asset("images/live.png"),
               ),
-              width: 150,
-              height: 150,
             ),
           ],
         ),
-        SizedBox(height: 200),
+        const SizedBox(height: 150),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton.icon(
               onPressed: () {
-                signInWithGoogle();
+                signInWithGoogle().then((value) {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return const First();
+                    },
+                  ));
+                });
               },
-              style: ElevatedButton.styleFrom(fixedSize: Size(175, 35)),
+              style: ElevatedButton.styleFrom(fixedSize: const Size(220, 35)),
               icon: Image.asset(
                 "images/1.jpg",
                 width: 20,
                 height: 20,
               ),
-              label: Text("Sign in with Google"),
+              label: Text("Sign in with Google",
+                  style: TextStyle(
+                    color: b_col,
+                  )),
             )
           ],
         ),
@@ -61,20 +77,31 @@ class _HomeState extends State<Home> {
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue.shade900,
-                    fixedSize: Size(175, 35)),
-                icon: Icon(Icons.facebook),
-                label: Text("Sign in with Facebook"))
+                    fixedSize: const Size(220, 35)),
+                icon: Icon(Icons.facebook, color: g_col),
+                label: Text(
+                  "Sign in with Facebook",
+                  style: TextStyle(color: g_col),
+                ))
           ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const First();
+                  },
+                ));
+              },
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.amber, fixedSize: Size(175, 35)),
-              icon: Icon(Icons.account_circle_rounded),
-              label: Text(" Continue as a guest"),
+                  backgroundColor: Colors.amber,
+                  fixedSize: const Size(220, 35)),
+              icon: Icon(Icons.account_circle_rounded, color: g_col),
+              label:
+                  Text(" Continue as a guest", style: TextStyle(color: g_col)),
             )
           ],
         )
