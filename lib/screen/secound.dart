@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-import '../verible.dart';
-
 class secound extends StatefulWidget {
   const secound({super.key});
 
@@ -38,55 +36,22 @@ class _secoundState extends State<secound> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        length: 3,
-        child: Scaffold(
-          bottomNavigationBar: BottomNavigationBar(
-              onTap: (value) {
-                a = value;
-                setState(() {});
-              },
-              currentIndex: a,
-              selectedItemColor: s_col,
-              items: [
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.search), label: 'Live talk'),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.history), label: 'history'),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.message_sharp), label: 'messages')
-              ]),
-          appBar: AppBar(),
-          body: TabBarView(
-            children: [
-              Container(
-                  child: Container(
-                      height: 150,
-                      width: 150,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          ElevatedButton(style: ButtonStyle(backgroundColor: MaterialStatePropertyAll(button)),
-                              onPressed: () {},
-                              child: Text("CONNECT WITH SOMEONE",style: TextStyle(color: g_col),))
-                        ],
-                      )),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage("images/images (1).jpeg")))),
-              Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage("images/images (1).jpeg")))),
-              Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage("images/images (1).jpeg"))))
-            ],
-          ),
-        ));
+    return Scaffold(
+      appBar: AppBar(actions: [
+        IconButton(onPressed: () {}, icon: Icon(Icons.share_outlined)),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.account_circle),
+        ),
+       PopupMenuButton(itemBuilder: (context) {
+         return List.empty();
+       },)
+      ]),
+      body: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage("images/images (1).jpeg")))),
+    );
   }
 }
