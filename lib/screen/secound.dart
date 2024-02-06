@@ -37,21 +37,40 @@ class _secoundState extends State<secound> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(actions: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.share_outlined)),
+      appBar: AppBar(title: Text("Livetalk",style: TextStyle(color: Colors.black)),backgroundColor: Colors.grey,actions: [
+        IconButton(onPressed: () {}, icon: Icon(Icons.share_outlined,color: Colors.black)),
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.account_circle),
+          icon: Icon(Icons.account_circle,color: Colors.black),
         ),
-       PopupMenuButton(itemBuilder: (context) {
-         return List.empty();
-       },)
+        PopupMenuButton(color: Colors.black,
+          itemBuilder: (context) {
+            return List.empty();
+          },
+        )
       ]),
       body: Container(
           decoration: BoxDecoration(
               image: DecorationImage(
                   fit: BoxFit.fill,
                   image: AssetImage("images/images (1).jpeg")))),
+
+    //  IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+    //   bottomSheet: Row(children: [
+    //     IconButton(onPressed: () {
+    //
+    //     }, icon: Icon(Icons.search,color: Colors.black,)),
+    //     SizedBox(width: 100,),
+    //     IconButton(onPressed: () {
+    //
+    //     }, icon: Icon(Icons.history,color: Colors.black)),
+    //     SizedBox(width: 100,),
+    //     IconButton(onPressed: () {
+    //
+    //     }, icon: Icon(Icons.message,color: Colors.black,))
+    //   ],),
+      
+
     );
   }
 }

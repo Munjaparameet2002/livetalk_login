@@ -4,7 +4,7 @@ import 'package:livetalk_login/screen/first.dart';
 import 'package:livetalk_login/verible.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     home: Home(),
     debugShowCheckedModeBanner: false,
   ));
