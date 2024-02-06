@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:livetalk_login/firebase/login.dart';
 import 'package:livetalk_login/screen/first.dart';
+import 'package:livetalk_login/screen/login_screen.dart';
+import 'package:livetalk_login/screen/secound.dart';
 import 'package:livetalk_login/verible.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MaterialApp(
@@ -90,9 +93,10 @@ class _HomeState extends State<Home> {
           children: [
             ElevatedButton.icon(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(
+
+                Navigator.pushReplacement(context, MaterialPageRoute(
                   builder: (context) {
-                    return const First();
+                    return  Example();
                   },
                 ));
               },

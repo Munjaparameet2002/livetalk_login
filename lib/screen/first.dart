@@ -32,7 +32,7 @@ class _FirstState extends State<First> {
             Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 InkWell(onTap: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => secound(),));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Example(),));
                 },
                   child: SizedBox(
                     height: 150,
