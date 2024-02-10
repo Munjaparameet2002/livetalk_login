@@ -5,6 +5,7 @@ import 'package:livetalk_login/screen/login_screen.dart';
 import 'package:livetalk_login/screen/secound.dart';
 import 'package:livetalk_login/verible.dart';
 import 'package:http/http.dart' as http;
+import 'package:livetalk_login/video_call_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -93,10 +94,9 @@ class _HomeState extends State<Home> {
           children: [
             ElevatedButton.icon(
               onPressed: () {
-
                 Navigator.pushReplacement(context, MaterialPageRoute(
                   builder: (context) {
-                    return  Example();
+                    return Video_call();
                   },
                 ));
               },

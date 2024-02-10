@@ -42,7 +42,8 @@ dependencies:
   http: ^1.2.0
   google_nav_bar:
   line_icons:
-
+  flutter_webrtc:
+  zego_uikit_prebuilt_call:
 dev_dependencies:
   flutter_test:
     sdk: flutter

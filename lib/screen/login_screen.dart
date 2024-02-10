@@ -44,7 +44,11 @@ class _LoginState extends State<Login> {
               });
               print('Response status: ${response.statusCode}');
               print('Response body: ${response.body}');
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Example(),));
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => secound(),
+                  ));
             },
           )
         ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:livetalk_login/verible.dart';
 
+import '../video_call_page.dart';
 import 'secound.dart';
 
 class First extends StatefulWidget {
@@ -29,31 +30,42 @@ class _FirstState extends State<First> {
             const SizedBox(
               height: 200,
             ),
-            Row(mainAxisAlignment: MainAxisAlignment.center,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                InkWell(onTap: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Example(),));
-                },
+                InkWell(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Video_call(),
+                        ));
+                  },
                   child: SizedBox(
                     height: 150,
                     width: 150,
-                    child: Wrap(alignment: WrapAlignment.center,
-                        children: [Image.asset("images/ic_select_male.png"),
-                          Text("MALE",style: TextStyle(fontSize: 35,color: g_col),),
-                        ]),
+                    child: Wrap(alignment: WrapAlignment.center, children: [
+                      Image.asset("images/ic_select_male.png"),
+                      Text(
+                        "MALE",
+                        style: TextStyle(fontSize: 35, color: g_col),
+                      ),
+                    ]),
                   ),
                 ),
                 SizedBox(
                   height: 150,
                   width: 150,
-                  child: Wrap(alignment: WrapAlignment.center,
-                      children: [Image.asset("images/ic_select_female.png")
-                      ,  Text("FEMALE",style: TextStyle(fontSize: 35,color: g_col),)
-                      ]),
+                  child: Wrap(alignment: WrapAlignment.center, children: [
+                    Image.asset("images/ic_select_female.png"),
+                    Text(
+                      "FEMALE",
+                      style: TextStyle(fontSize: 35, color: g_col),
+                    )
+                  ]),
                 ),
               ],
             ),
-
           ],
         ),
       ),
